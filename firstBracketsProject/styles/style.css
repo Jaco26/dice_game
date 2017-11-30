@@ -1,0 +1,36 @@
+.container {
+	max-width: 640px !important;
+	min-width: 640px !important;
+	margin: 0 auto;
+}
+
+.navbar {
+	background-color:#d3fcff;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+
+.dice {
+	height: 460px;
+	width: auto;
+	background-color: cadetblue;
+	padding: 5px;
+}
+
+.di {
+	height: 150px;
+	width: 150px;
+	margin: 25px auto;
+	background-color:aquamarine 
+}
+
+.di p {
+	display: flex;
+	background-color: beige;
+	height: 150px;
+	padding-left: 50px;
+	align-items: center;
+	font-size: 80px
+}
+
