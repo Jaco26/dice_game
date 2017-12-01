@@ -1,3 +1,5 @@
+//when GamesPlayed = 10...disable rollBtn & animate a <modal> across screen prompting a look at the articles. Make it go back and fourth with a loop.
+
 
 //store my dice & their dice elements in variables
 var mydi1 = $('.my-di-1 p');
@@ -54,12 +56,13 @@ var rollRoll = function(){
 		
 		games.text('Games played: '+gamesPlayed);
 		gamesPlayed++;
+	
 	});
 }
 
 $(document).ready(rollRoll);
 
-
+//OLD CODE  OLD APPROACH  OLD CODE  OLD APPROACH
 
 //After 5 games, .animate() a message like "YOU'VE PLAYED ENOUGH" accross the <html> over 5 seconds and disable the game.
 
