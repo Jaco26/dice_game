@@ -34,3 +34,11 @@
 	font-size: 80px
 }
 
+output {
+	display: flex;
+	background-color: beige;
+	height: 150px;
+	padding-left: 50px;
+	align-items: center;
+	font-size: 80px
+}

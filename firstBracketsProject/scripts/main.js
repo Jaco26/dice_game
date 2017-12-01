@@ -5,34 +5,62 @@ var mydi2 = $('.my-di-2 p');
 var theirdi1 = $('.their-di-1 p');
 var theirdi2 = $('.their-di-2 p');
 
-//store game info & roll button and 
-var gameInfo = $('.game-controls p');
+//store game info & roll button 
+var gameCount = $('#gameNum');
 var rollBtn = $('.game-controls input');
 
 //create variable to store wins/losses data
-var winLose = $('.win-lose');
+var winLose = $('#win-lose');
 //create variable to keep track of game count
 
 
+var rollRoll = function(){
+	rollBtn.click(function () {
+		var one = Math.floor(Math.random() * 6) + 1;
+		var two = Math.floor(Math.random() * 6) + 1;
+		var three = Math.floor(Math.random() * 6) + 1;
+		var four = Math.floor(Math.random() * 6) + 1;
+		var theirDice = three + four;
+		var myDice = Number(one) + Number(two);
+	
+		mydi1.text(one);
+		mydi2.text(two);
+		theirdi1.text(three);
+		theirdi2.text(four);
+	
+		if(myDice > theirDice){
+			winLose.text("!!! YOU WIN !!!")
+		} else if (myDice = theirDice){
+			winLose.text("shucks. it's a tie")
+		} else {winLose.text("sorry, but you lost. dang.")}
+	});
+}
+
+$(document).ready(rollRoll);
 
 
 
-//create functions to print random number on each di and return a number 
 
-function myDi1(){
-	var ranVal = Math.floor(Math.random() * 6) + 1;
-	mydi1.text(ranVal);
+
+
+//Use Function Expressions to create functions to print random number on each di and return a number 
+
+var myDi1 = function(){
+	var ranVal1 = Math.floor(Math.random() * 6) + 1;
+	mydi1.text(ranVal1);
 };
-function myDi2(){
-	var ranVal = Math.floor(Math.random() * 6) + 1;
-	mydi2.text(ranVal);
+var myDi2 = function(){
+	var ranVal2 = Math.floor(Math.random() * 6) + 1;
+	mydi2.text(ranVal2);
 }; 
 
-function theirDi1(){
-	theirdi1.text(Math.floor(Math.random() * 6) + 1);
+var theirDi1 = function(){
+	var ranVal3 = Math.floor(Math.random() * 6) + 1
+	theirdi1.text(ranVal3);
 };
-function theirDi2(){
-	theirdi2.text(Math.floor(Math.random() * 6) + 1);	
+var theirDi2 = function(){
+	var ranVal4 = Math.floor(Math.random() * 6) + 1
+	theirdi2.text(ranVal4);	
 };
 	
 
@@ -55,41 +83,5 @@ var diceArray = [myDi1, myDi2, theirDi1, theirDi2];
 
 
 
-
-
-//Create function rollDice() which will...
-
-//1: print random numbers on each of the dice
-//2: roll the dice 10 times
-//Create function to call all for "dice roll" function
-//link it to the "Click to Roll" button and allow it to run once the webpage has loaded
-
-function rollDice(){
-	rollBtn.click(function() {
-		myDi1(); myDi2(); theirDi1(); theirDi2();
-	});
-};
-
-$(document).ready(rollDice);
-
-
-
-
-
-
-
-
-//create function to check if win or lose
-
-//function checkWin
-
-//use conditionals to alert "YOU WIN!" and print "win" in $('#win-lose)
-
-
-
-
-
-
-
-
+ 
 
