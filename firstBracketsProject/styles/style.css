@@ -22,7 +22,8 @@
 	height: 150px;
 	width: 150px;
 	margin: 25px auto;
-	background-color:aquamarine 
+	background-color:aquamarine;
+	border-radius: 5px;	
 }
 
 .di p {
@@ -31,14 +32,15 @@
 	height: 150px;
 	padding-left: 50px;
 	align-items: center;
-	font-size: 80px
+	font-size: 80px;
+	border-radius: 5px;	
 }
 
-output {
-	display: flex;
-	background-color: beige;
-	height: 150px;
-	padding-left: 50px;
-	align-items: center;
-	font-size: 80px
+#gameNum {
+	
+}
+
+.whatHappened p{
+	width:200px;
+	height:40px;
 }
