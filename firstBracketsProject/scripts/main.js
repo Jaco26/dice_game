@@ -46,6 +46,7 @@ var rollRoll = function(){
 		} else if (myDice === theirDice){
 			winLose.text("shucks. it's a tie.");
 			ties.text('Ties: '+tieCount);
+			tieCount++;
 		} else {winLose.text("sorry, but you lost. dang.");
 				losses.text('Losses: '+lossCount);
 				lossCount++;
